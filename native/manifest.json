@@ -1,0 +1,9 @@
+{
+    "name": "com.extension.native.editor",
+    "description": "A native host that runs greet.zsh",
+    "path": "/Users/tliu1/tyler/myworkspace/chrome-editor/native/script.mjs",
+    "type": "stdio",
+    "allowed_origins": [
+        "chrome-extension://bhlhnicpbhignbdhedgjhgdocnmhomnp/"
+    ]
+}

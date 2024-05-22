@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Editor",
+    "version": "1.0",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnhVQIbjGkFt2X8pQK4Arl3AyZfHIWFQlCB0lsKzEjuLhTEK8mzuXl9gWVivGfhdeJ6sl41BPPufyNnsEUII+iV7WEcs3DOai57WPy+FP7Rhh3ziWw7tFgIuOB/cPP+okxyYZs09i6VW0+cwQdXAZpkRPtpY8gYQdGc50Mzkcb80wfP0I9BXSCl5qufpybH5AdD7AXyN5H6SONYMge/4rSeq48T25b7S056rVysgKRWNCetKPLBcfm5s+yQ56CfQlDY9UBTJvpAlK4LKKk5YVc2IAJyHP76pEcFhShJFxbM7f45omDavXBDU7+xwi7H8yKZTmL0ueMuIu0kyzqtTpaQIDAQAB",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/bulb_icon_p.png",
+            "48": "images/bulb_icon_p.png",
+            "128": "images/bulb_icon_p.png"
+        },
+        "content_security_policy": "script-src 'self'; object-src 'self'"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://baidu/*/"],
+            "js": ["content.js"],
+            "css": ["content.css"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": ["activeTab", "nativeMessaging"],
+    "host_permissions": [
+        "*://*/*/"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    }
+}

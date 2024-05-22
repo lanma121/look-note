@@ -1,0 +1,14 @@
+#editor {
+    display: flex;
+    min-height: 200px;
+    min-width: 200px;
+    width: 100%;
+    position: fixed;
+    right: 40px;
+}
+
+#editor #content {
+    width: 100%;;
+    min-height: 100px;
+    padding: 20px 14px;
+}
